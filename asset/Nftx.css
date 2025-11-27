@@ -14,6 +14,7 @@
     --banner-para-color:#01ADE5;
     --aunctions-background-color:#000000;
     --card-color:#1C1D1F;
+    --nav-back-color:#1A1A1A;
 }
 body,
 html{
@@ -98,17 +99,16 @@ ul{
   background: var(--background-color);
 }
 nav,
-.nav-collapes,
-.nav-collapes>ul{
+.nav-collapes{
     display: flex;
     align-items: center;
 }
-.nav-collapes{
+/* .nav-collapes{
     margin: 0 auto;
-}
+} */
 .nav-collapes>.nav-btn{
    max-width: 331px;
-   margin-left: 171px;
+   /* margin-left: 171px; */
    display: flex;
    align-items: center;
 }
@@ -151,6 +151,18 @@ nav,
 }
 .nav-links:hover{
     color: var(--primary-color);
+}
+.nav-collapes{
+    width: 100%;
+}
+.nav-collapes>ul{
+    background: var(--nav-back-color) !important;
+    max-width: 560px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    height: 62px;
+    margin: 0 auto;
 }
 .search-icon{
     width: 33px;
@@ -705,10 +717,22 @@ color: var(--primary-color) !important;
 .footer-img{
     display: flex;
 }
-@media screen and(max-width:1300px){
+@media screen and (max-width:1400px){
+    /* .nav-collapes>ul{
+        margin-left: 250px;
+    } */
+}
+@media screen and (max-width:1300px){
     .social-cont>ul>li{
         margin-right: 30px;
     }
+    /* .nav-collapes>.nav-btn{
+        margin-left: 90px;
+    }
+    .primary-btn{
+        padding: 14px 20px;
+        font-size: 14px;
+    } */
 }
 @media screen and (max-width:1200px){
     .primary-btn{
@@ -718,6 +742,9 @@ color: var(--primary-color) !important;
     .secondary-btn{
         margin-bottom: 10px;
     }
+    /* .nav-collapes>ul{
+        margin-left: 150px;
+    } */
     .col-33{
         width: 50%;
     }
@@ -809,6 +836,10 @@ color: var(--primary-color) !important;
     .btn-box{
         margin: 10px auto !important;
     }
+    .close-btn{
+        position: fixed;
+        right: 10px;
+    }
     .close-btn.open::after{
         display: none;
     }
@@ -849,6 +880,10 @@ color: var(--primary-color) !important;
         top: 3px;
         left: 0;
     }
+    .nav-collapes>ul{
+        height: auto;
+        background: none !important;
+    }
     .nav-collapes{
         /* display: none; */
         position: fixed;
@@ -860,6 +895,7 @@ color: var(--primary-color) !important;
         background: var(--background-color);
         transition: all 0.5s linear;
         padding: 100px 0;
+        z-index: 99;
     }
     .nav-collapes,
     .nav-collapes>ul{
